@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Optimization - Week 4</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reponsive Images</h1>
+        <section>
+            <h2> Same image diferent sizes</h2> 
+            <img srcset="https://placehold.co/320x320 320w,
+            https://placehold.co/600x400 600w,
+            https://placehold.co/1024x500 1024w"
+            sizes="(max-width:320px) 320px, 
+            (max-width:600px) 600px,
+            (max-width:1024px) 1024px"
+            src="https://placehold.co/600x400" 
+            alt="placeholder image">
+
+            <section>
+                <h2>Same size different resolution</h2>
+                <img srcset="https://placehold.co/300x300 1x,
+                https://placehold.co/600x600 2x,
+                https://placehold.co/900x900 3x"  
+                scr="https://placehold.co/600x600" alt="placeholder image" class="avatar">
+
+            </section>
+
+            <section>
+                <h2>Image size and resolution switching</h2>
+                <picture>
+                    <source srcset="https://placehold.co/300x300, 
+                    https://placehold.co/600x600 2x" media="(max-width: 320px)">
+                    <source srcet="https://placehold.co/600x600, https://placehold.co/1200x1200 2x" media="(max-width: 600px)">
+                    <source srcet="https://placehold.co/1200x1200, https://placehold.co/2400x2400 2x" media="(max-width: 1200px)">
+                    <img scr="https://placehold.co/600x400" alt="placeholder image">
+
+
+        
+
+                </picture>
+            </section>
+
+            <section>
+                <h2>Art Direction</h2>
+                <picture>
+                    <source srcset="image/fall-dog-640.jpg" media="(max-width: 640px)">
+                    <source srcset="image/fall-dog-900.jpg" media="(max-width: 900px)">
+                    <source srcset="image/fall-dog-1200.jpg" media="(max-width: 900px)">
+                    <img src="images/fall-dog-900.jpg" alt="image of dog sitting in his bed">
+                </picture>
+            </section>
+
+
+
+        </section>
+    </div>
+</body>
+</html>
